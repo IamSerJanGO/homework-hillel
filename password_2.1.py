@@ -7,27 +7,31 @@
 4. Пароль может содержать один и более специальный символ: !  ^  ?  ,  .  +  =  % НЕОБЯЗАТЕЛЬНОЕ УСЛОВИЕ !!!
 5. Пароль может содержать одну и более цыфр - НЕОБЯЗАТЕЛЬНОЕ УСЛОВИЕ !!!
 """
+# Немного сделал по своим условиям, но если оценка будет ниже - я переделаю)
 password = input('Придумай свой пароль: ')
-x = y = z = n = False
-if len(password) >= 10:
-    if len(password) >= 15:
-        x = True  # Переменная для длины пароля
+pass_length = pass_upp = pass_low = pass_digits = False
+special_char = '!@#$%^&*+=_'
+if len(password) >= 8:
+    if len(password) >= 12:
+        pass_length = True  # Переменная для длины пароля
 else:
     exit('Прости, но пароль слишком коротки1')
 for i in password:
-    if i.isupper() and i.islower():
-        y = True
+    if i.isupper():
+        pass_upp = True  # Переменная для проверки пароля на наличие символов верхнего регистра
+    if i.islower():
+        pass_low = True  # Переменная для проверки пароля на наличие символов нижнего регистра
     if i.isdigit():
-        z = True  # Переменная для проверки пароля на наличие цифр
-    if i == '_' or i == '!' or i == '^' or i == ',' or i == '.' or i == '?' or i == '+' or i == '=' or i == '%':
-        n = True  # Переменная для проверки пароля на наличие спец-символов
-if y is True:
+        pass_digits = True  # Переменная для проверки пароля на наличие цифр
+    if special_char in i:
+        special_char = True  # Переменная для проверки пароля на наличие спец-символов
+if pass_upp and pass_low:
     print('Пароль принят')
-    if x and z and n is True:
+    if pass_length and pass_digits and special_char:
         print('Отлично! Надежный пароль!')
-    elif x is True and z or n is True:
+    elif pass_length and special_char or pass_digits:
         print('Неплохо! Пароль средней надежности')
-    elif z or n is True:
+    elif special_char or pass_digits:
         print('Пароль слабоват, но тебе отвечать за сваою безопасность')
 else:
     exit('Слабый пароль - придумай что-то посложнее')
