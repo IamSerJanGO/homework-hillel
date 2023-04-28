@@ -15,7 +15,7 @@ if len(password) >= 10:
 else:
     exit('Прости, но пароль слишком коротки1')
 for i in password:
-    if i.isupper() and i.isupper():
+    if i.isupper() and i.islower():
         y = True
     if i.isdigit():
         z = True  # Переменная для проверки пароля на наличие цифр
