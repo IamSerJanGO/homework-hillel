@@ -30,8 +30,9 @@ if pass_upp and pass_low:
     if pass_length and pass_digits and special_char:
         print('Отлично! Надежный пароль!')
     elif pass_length and special_char or pass_digits:
-        print('Неплохо! Пароль средней надежности')
+        print('Неплохо! Пароль средней надежности\nИспользуй специальные символы\nИспользуй цифры')
     elif special_char or pass_digits:
-        print('Пароль слабоват, но тебе отвечать за сваою безопасность')
+        print('Пароль слабоват, но тебе отвечать за сваою безопасность\nСделай пароль длиннее\n Используй '
+              'специальные символы и цифры')
 else:
     exit('Слабый пароль - придумай что-то посложнее')
