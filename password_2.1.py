@@ -9,8 +9,8 @@
 """
 # Немного сделал по своим условиям, но если оценка будет ниже - я переделаю)
 password = input('Придумай свой пароль: ')
-pass_length = pass_upp = pass_low = pass_digits = False
-special_char = '!@#$%^&*+=_'
+pass_length = pass_upp = pass_low = pass_digits = special_char = False
+special_char_list = '!@#$%^&*+=_'
 if len(password) >= 8:
     if len(password) >= 12:
         pass_length = True  # Переменная для длины пароля
@@ -23,16 +23,16 @@ for i in password:
         pass_low = True  # Переменная для проверки пароля на наличие символов нижнего регистра
     if i.isdigit():
         pass_digits = True  # Переменная для проверки пароля на наличие цифр
-    if special_char in i:
+    if special_char_list in i:
         special_char = True  # Переменная для проверки пароля на наличие спец-символов
 if pass_upp and pass_low:
     print('Пароль принят')
     if pass_length and pass_digits and special_char:
         print('Отлично! Надежный пароль!')
-    elif pass_length and special_char or pass_digits:
+    elif pass_length and (special_char or pass_digits):
         print('Неплохо! Пароль средней надежности\nИспользуй специальные символы\nИспользуй цифры')
     elif special_char or pass_digits:
-        print('Пароль слабоват, но тебе отвечать за сваою безопасность\nСделай пароль длиннее\n Используй '
+        print('Пароль слабоват, но тебе отвечать за сваою безопасность\nСделай пароль длиннее\nИспользуй '
               'специальные символы и цифры')
 else:
     exit('Слабый пароль - придумай что-то посложнее')
