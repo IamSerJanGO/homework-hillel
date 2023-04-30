@@ -41,7 +41,7 @@ for i in range(1):
         print('Use digits')
     else:
         ...
-    if special_char  is False:
+    if special_char is False:
         print('Use special characters')
     else:
         ...
