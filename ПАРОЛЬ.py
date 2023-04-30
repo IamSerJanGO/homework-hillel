@@ -24,24 +24,14 @@ for n in range(1):
     if special_char:
         password_score += 1
 print(f'password_score: {password_score}')
-for i in range(1):
-    if pass_length is False:
-        print('The minimum password length is 8')
-    else:
-        ...
-    if pass_low is False:
-        print('Use lower letters')
-    else:
-        ...
-    if pass_upp is False:
-        print('Use capital letters')
-    else:
-        ...
-    if pass_digits is False:
-        print('Use digits')
-    else:
-        ...
-    if special_char is False:
-        print('Use special characters')
-    else:
-        ...
+if pass_length is False:
+    print('The minimum password length is 8')
+if pass_low is False:
+    print('Use lower letters')
+if pass_upp is False:
+    print('Use capital letters')
+if pass_digits is False:
+    print('Use digits')
+if special_char is False:
+    print('Use special characters')
+
