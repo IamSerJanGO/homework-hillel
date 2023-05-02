@@ -10,9 +10,9 @@ print('Yes' if user_word in user_text else 'No')
 # Третье условие
 user_str = input('Enter your text:')
 list_str = list(user_str)
-if list_str[0] == 'a' and list_str[1] == 'b' and list_str[2] == 'c':
-    list_str[0], list_str[1], list_str[2] = 'w', 'w', 'w'
-    print(''.join(list_str))
+if user_str.startswith('abc'):
+    user_str = 'www' + user_str[3:]
+    print(user_str)
 else:
     user_str += 'qqq'
     print(user_str + 'qqq')
