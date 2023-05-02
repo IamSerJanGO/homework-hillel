@@ -14,14 +14,7 @@ for i in password:
         pass_digits = True
     if i in special_char_list:
         special_char = True
-if pass_low:
-    password_score += 1
-if pass_upp:
-    password_score += 1
-if pass_digits:
-    password_score += 1
-if special_char:
-    password_score += 1
+password_score += sum((pass_low, pass_upp, pass_digits, special_char))
 print(f'password_score: {password_score}')
 if pass_length is False:
     print('The minimum password length is 8')
