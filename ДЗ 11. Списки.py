@@ -1,3 +1,4 @@
+
 print('Условие 1 и 2)')
 # Первое и второе условие:
 digit_list = []
@@ -73,7 +74,7 @@ print(max_element, min_element, sep='\n')
 print(' Условие 7)')
 user_text = input('Enter your text: ')
 x = 0
-for i in list(user_text):
+for i in user_text:
     if i.isdigit():
         x += 1
 print(f'Кол-во цифр в тексте: {x}')
