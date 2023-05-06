@@ -1,4 +1,3 @@
-
 print('Условие 1 и 2)')
 # Первое и второе условие:
 digit_list = []
@@ -11,7 +10,6 @@ while x < 5:
 print(digit_list)
 digit_list.pop()
 print('2)', digit_list, sep='\n')
-
 
 # Третье условие:
 print('Условие 3)')
@@ -75,7 +73,7 @@ print(max_element, min_element, sep='\n')
 print(' Условие 7)')
 user_text = input('Enter your text: ')
 x = 0
-#list(user_text)
+# list(user_text)
 for i in list(user_text):
     if i.isdigit():
         x += 1
