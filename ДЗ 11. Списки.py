@@ -73,7 +73,6 @@ print(max_element, min_element, sep='\n')
 print(' Условие 7)')
 user_text = input('Enter your text: ')
 x = 0
-# list(user_text)
 for i in list(user_text):
     if i.isdigit():
         x += 1
