@@ -1,3 +1,4 @@
+
 # Первое условие
 first_word = input('Enter your word: ')
 print('+' if first_word == first_word[::-1] else '-')
@@ -26,4 +27,4 @@ print(''.join(no_dgs_str))
 
 # Условие № 5
 email = input('Введите вашу почту: ')
-print('YES' if '@' and '.' in email else 'NO')
+print('YES' if '@' in email and '.' in email else 'NO')
