@@ -1,4 +1,3 @@
-
 # Первое условие
 first_word = input('Enter your word: ')
 print('+' if first_word == first_word[::-1] else '-')
