@@ -9,9 +9,9 @@ quantity_files = int(input('Введите количество ваших фа�
 print('Возможные операции с файлами:', 'W - write', 'R - read', 'X - execute', sep='\n')
 files = {}
 for i in range(quantity_files):
-    files_name, *file_type = input('Название файла, через пробел возможные операции с файлом: ').split(' ')
-    files[files_name] = set(file_type)
-print(files, sep='\n')
+    files_name, *type_operation = input('Название файла, через пробел возможные операции с файлом: ').split(' ')
+    files[files_name] = set(type_operation)
+# print(files, sep='\n') - оставил для себя - удобно проверять код
 
 quantity_operation = int(input('Количество запросов к файлам: '))
 finish_list = []
