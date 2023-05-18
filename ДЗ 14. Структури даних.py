@@ -7,7 +7,7 @@ print(f'Должники за Июль у которых нет долга за 
 # Второе условие
 test_list = ['ListTest', 'SerJan', 'GoogleDisk']
 new_list = []
-
+'''
 for object_list in test_list:
     str_object = ''
     for i in range(len(object_list)):
@@ -18,4 +18,21 @@ for object_list in test_list:
         else:
             str_object += object_list[i]
     new_list.append(str_object)
+print(new_list)
+'''
+#  Второе условие (Вариант второй)
+test_list = ['ListTest', 'SerJan', 'GoogleDisk']
+new_list = []
+
+for num_list, object_list in enumerate(test_list):
+    str_ob = ''
+    for i, char in enumerate(object_list):
+        if char.isupper():
+            if i != 0:
+                str_ob += '_'
+                str_ob += char.lower()
+            str_ob += char.lower()
+        else:
+            str_ob += char
+    new_list.append(str_ob)
 print(new_list)
