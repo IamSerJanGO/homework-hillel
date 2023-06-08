@@ -1,7 +1,5 @@
-def change():
-    print('Введите элементы спистка через пробел !')
-    user_lst = input().split()
-    copy_lst = user_lst.copy()
+def change(user_lst):
+    copy_lst = user_lst
     first, last = copy_lst[0], copy_lst[-1]
     if len(user_lst) >= 2:
         user_lst[0], user_lst[-1] = last, first
@@ -10,25 +8,26 @@ def change():
         print('Ваш список слишком короткий !')
 
 
-change()
+print('Введите элементы спистка через пробел !')
+user_lst = input().split()
+change(user_lst)
 
-def to_dict():
-    lst = input('Введите элементы спистка через пробел !: ').split()
+
+def to_dict(lst):
     dictionary = {}
     for item in lst:
         dictionary[item] = item
     return dictionary
 
 
-print('Словарь из вашего списка:', to_dict())
+lst = input('Введите элементы спистка через пробел !: ').split()
+print('Словарь из вашего списка:', to_dict(lst))
+
 
 def sum_range(start: int, end: int):
-    count = 0
     if start > end:
         start, end = end, start  # swap the value
-    for i in range(start, end + 1):
-        count += i
-    return count
+    return sum(range(start, end + 1))
 
 
 start = int(input('Enter your first number: '))
